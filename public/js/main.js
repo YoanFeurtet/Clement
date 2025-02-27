@@ -23,11 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // G�rer les animations au scroll
-  window.addEventListener("scroll", () => {
-    requestAnimationFrame(() => houseAnimation.updateOnScroll());
-  });
-
   // Scroll smooth pour les liens
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
