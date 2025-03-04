@@ -219,6 +219,13 @@ header {
   font-size: 1rem;
 }
 
+#devis input:focus,
+#devis textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 5px rgba(121, 188, 194, 0.5);
+}
+
 #devis button {
   background: var(--primary);
   color: white;
