@@ -1,0 +1,380 @@
+/*******************************************
+ * RESPONSIVE DESIGN - MOBILE FIRST
+ *******************************************/
+
+/* Reset et base pour Mobile first */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 13px;
+}
+
+/* Header et Navigation */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  /* 10% de la hauteur de l'écran, ajustable */
+  min-height: 50px;
+  /* Évite qu'il devienne trop petit */
+  background-color: var(--bg-overlay);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles du menu burger */
+.menu-toggle {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1vh;
+  /* Ajuste dynamiquement la taille */
+  width: 5vw;
+  /* 5% de la largeur de l'écran, ajustable */
+  max-width: 40px;
+  /* Pour ne pas dépasser sur grand écran */
+}
+
+.menu-toggle span {
+  display: block;
+  width: 30px;
+  /* Taille plus visible */
+  height: 4px;
+  /* Barres plus épaisses */
+  background-color: var(--primary);
+  margin: 5px auto;
+  /* Meilleur espacement */
+  border-radius: 2px;
+  /* Coins arrondis pour un look plus moderne */
+  transition: all 0.3s ease-in-out;
+}
+
+/* �tat ouvert du menu */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Menu mobile */
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.6));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  padding: 3vh 2rem;
+}
+
+.nav-links.active {
+  transform: translateY(0);
+}
+
+/* Layout principal */
+.main-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 4rem;
+  /* Espace pour le header fixe */
+}
+
+.hero h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero img {
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.btn-cta {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Travaux Section */
+#travaux {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.travaux-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.travail-item {
+  width: 100%;
+  margin: 1rem 0;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+}
+
+.travail-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.travail-item div {
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Contact Section */
+#contact {
+  width: 100%;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.social-icons {
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Formulaire Section */
+#devis {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+form {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* D�sactiver l'animation sur mobile */
+.house-animation {
+  display: none !important;
+}
+
+/* Tablet Portrait (576px+) */
+@media screen and (min-width: 36rem) {
+  html {
+    font-size: 14px;
+  }
+
+  .main-content {
+    padding: 0 1rem;
+  }
+
+  .btn-cta {
+    width: auto;
+  }
+
+  .house-animation {
+    display: block !important;
+    position: fixed;
+    left: 1rem;
+    top: 25%;
+    width: 120px;
+    height: 180px;
+  }
+
+  .social-icons {
+    gap: 2rem;
+  }
+}
+
+/* Tablet Landscape (768px+) */
+@media screen and (min-width: 48rem) {
+  html {
+    font-size: 15px;
+  }
+
+  /* Navigation desktop */
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    height: auto;
+    flex-direction: row;
+    transform: none;
+    padding: 1rem;
+    background: none;
+  }
+
+  .hero {
+    padding: 4rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .house-animation {
+    width: 180px;
+    height: 270px;
+    left: 2rem;
+    top: 30%;
+  }
+
+  /* Alternance des travaux */
+  .travail-item {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  .travail-item:nth-child(2) {
+    transform: translateX(50px);
+  }
+
+  .travail-item.animated {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Desktop (992px+) */
+@media screen and (min-width: 62rem) {
+  html {
+    font-size: 16px;
+  }
+
+  .main-content {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .travail-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem;
+    margin: 3rem 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .travail-item img {
+    width: 45%;
+    margin-bottom: 0;
+    border-radius: 8px;
+  }
+
+  .travail-item div {
+    width: 50%;
+    padding: 0 2rem;
+    text-align: left;
+  }
+
+  .travail-item:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .travail-item:nth-child(2) div {
+    text-align: right;
+  }
+
+  .house-animation {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+/* Large Desktop (1200px+) */
+@media screen and (min-width: 75rem) {
+  .main-content {
+    max-width: 1400px;
+  }
+
+  .hero {
+    padding: 5rem 2rem;
+  }
+
+  .travail-item {
+    margin: 4rem 0;
+  }
+}
+
+/* Print styles */
+@media print {
+  .main-content {
+    width: 100%;
+    margin: 0;
+    padding: 2cm;
+  }
+
+  .btn-cta,
+  .social-icons,
+  .house-animation {
+    display: none;
+  }
+}

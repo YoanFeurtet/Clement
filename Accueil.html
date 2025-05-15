@@ -1,0 +1,149 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Maçonnerie de qualité avec des services personnalisés, devis gratuits et travaux professionnels dans la région de Bourgogne" />
+  <meta name="keywords"
+    content="maçonnerie, construction, rénovation, pierre de Bourgogne, travertin, CBP Construction" />
+  <meta name="author" content="CBP Construction" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph pour les réseaux sociaux -->
+  <meta property="og:title" content="CBP Construction - Maçonnerie de qualité" />
+  <meta property="og:description" content="Spécialistes de la construction et rénovation en Bourgogne" />
+  <meta property="og:image" content="/images/LOGO-SANS-FOND.png" />
+  <meta property="og:type" content="website" />
+
+  <title>CBP Construction - Maçonnerie de qualité</title>
+
+  <!-- Liens vers les fichiers CSS -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/animations.css" />
+  <link rel="stylesheet" href="/styles/responsive.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+
+
+  <!-- Contenu principal -->
+  <div class="main-content">
+    <!-- En-tête -->
+    <header>
+      <nav class="topbar" role="navigation">
+        <button class="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#travaux">Mon travail</a></li>
+          <li><a href="#contact">Me trouver</a></li>
+          <li><a href="#devis">Devis</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Section d'accueil -->
+    <section id="accueil" class="hero animate-on-scroll">
+      <h1>Maçonnerie de qualité pour tous vos projets</h1>
+      <p>
+        Spécialistes de la construction et de la rénovation, nous transformons
+        vos idées en réalité.
+      </p>
+      <a href="#devis" class="btn-cta">Demander un devis</a>
+      <img src="/images/LOGO-SANS-FOND.png" alt="CBP Construction - Logo" class="hero-image" />
+    </section>
+
+    <!-- Section Travaux -->
+    <section id="travaux" class="animate-on-scroll">
+      <h2>Mon Travail</h2>
+      <div class="travaux-container">
+        <article class="travail-item animate-on-scroll">
+          <img src="/images/pierre-bourgogne.jpg" alt="Travail de maçonnerie en Pierre de Bourgogne" />
+          <div>
+            <h3>Travail en Pierre de Bourgogne</h3>
+            <p>
+              Un exemple de travail réalisé avec un matériau robuste et
+              esthétique.
+            </p>
+          </div>
+        </article>
+
+        <article class="travail-item animate-on-scroll">
+          <img src="/images/terasse-travertin.jpg" alt="Terrasse en travertin élégante et durable" />
+          <div>
+            <h3>Création d'une Terrasse en Travertin</h3>
+            <p>
+              Cette terrasse offre une esthétique élégante et une résistance
+              parfaite.
+            </p>
+          </div>
+        </article>
+
+        <article class="travail-item animate-on-scroll">
+          <img src="/images/crepi-parement.jpg" alt="Travaux de crépi et parement" />
+          <div>
+            <h3>Travaux de Crépi et Parement</h3>
+            <p>
+              Apportez une touche de modernité à vos murs avec ce crépi
+              soigné.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="animate-on-scroll">
+      <h2>Me trouver</h2>
+      <p>Suivez-moi sur mes réseaux sociaux :</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com" aria-label="Facebook">
+          <i class="fab fa-facebook fa-3x"></i>
+        </a>
+        <a href="https://www.instagram.com" aria-label="Instagram">
+          <i class="fab fa-instagram fa-3x"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section Devis -->
+    <!-- Section Devis -->
+    <section id="devis" class="animate-on-scroll">
+      <h2>Demande de Devis</h2>
+      <form>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required />
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" required />
+
+        <label for="phone">Téléphone (facultatif) :</label>
+        <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" />
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
+        <button type="submit">Envoyer</button>
+        <p id="confirmation-message" style="display: none; color: green; margin-top: 10px;">
+          Votre demande a bien été envoyée !
+        </p>
+      </form>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 CBP Construction - Tous droits réservés</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>

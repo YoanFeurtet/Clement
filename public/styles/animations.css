@@ -1,0 +1,78 @@
+/*******************************************
+ * ANIMATIONS GLOBALES
+ *******************************************/
+/* Animation de base pour le fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*******************************************
+ * ANIMATIONS DES �L�MENTS DE PAGE
+ *******************************************/
+/* Animation des cards de travaux */
+.travail-item {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: var(--transition-default);
+}
+
+.travail-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*******************************************
+ * NOUVELLES CLASSES POUR .animate-on-scroll
+ *******************************************/
+/* Style initial : invisibilit� et d�calage */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+
+/* Style apr�s animation : visible et position normale */
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*******************************************
+ * ANIMATIONS AU HOVER
+ *******************************************/
+/* Animations au hover */
+.btn-cta:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-0.125rem);
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+/* Animation de la navigation */
+.topbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0.125rem;
+  bottom: -0.25rem;
+  left: 50%;
+  background-color: var(--primary);
+  transition: var(--transition-default);
+  transform: translateX(-50%);
+}
+
+.topbar a:hover::after {
+  width: 100%;
+}
